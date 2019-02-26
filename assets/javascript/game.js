@@ -38,6 +38,10 @@ document.onkeyup = function() {
         }
     }
     
+    //don't allow duplicate userGuess
+    
+    // else if statement to alert the user when they enter a non-letter key (ex: space, esc, #, etc.)
+    
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
