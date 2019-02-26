@@ -5,6 +5,7 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var guessesTried = [];
+var computerGuess = alphaArray[Math.floor(Math.random() * alphaArray.length)];
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -14,7 +15,6 @@ var guessesTriedText = document.getElementById("guessesTried-text");
 document.onkeyup = function() {
     var userGuess = event.key;
     userGuess = userGuess.toLowerCase(event.key);
-    var computerGuess = alphaArray[Math.floor(Math.random() * alphaArray.length)];
     guessesTried.push(userGuess);
     console.log(computerGuess);
 
@@ -24,6 +24,7 @@ document.onkeyup = function() {
         guessesTried = [];
         console.clear();
         alert("Your third eye is strong.");
+        computerGuess = alphaArray[Math.floor(Math.random() * alphaArray.length)];
     }
     else if (userGuess != computerGuess) {
         guessesLeft--;
@@ -33,6 +34,7 @@ document.onkeyup = function() {
             guessesTried = [];
             console.clear();
             alert("You must not be one with the force.");
+            computerGuess = alphaArray[Math.floor(Math.random() * alphaArray.length)];
         }
     }
     
